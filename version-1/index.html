@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jiakuan Lu, an electrical and electronic engineering student working across embedded hardware, power electronics and robotics research.">
+  <meta name="theme-color" content="#131815">
+  <title>Jiakuan Lu | Engineering Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top"><span class="monogram" aria-hidden="true">JL</span> <span>Jiakuan Lu</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="name">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="label hero-label">Engineering portfolio</p>
+          <h1 id="name">Jiakuan Lu<span>.</span></h1>
+          <p class="hero-role">Electrical &amp; Electronic Engineering</p>
+          <p class="hero-intro">My work spans embedded hardware, power electronics and robotics research, from circuit simulation and bench testing to reproducing robotic grasping experiments.</p>
+          <div class="hero-links">
+            <a class="button" href="#work">Explore my work</a>
+            <a class="secondary-link" href="#experience">Research &amp; experience</a>
+          </div>
+          <div class="hero-school">
+            <span class="label">BEng (Hons) candidate</span>
+            <span>University of Nottingham Ningbo China</span>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <img src="./assets/circuit-board.webp" width="1254" height="1254" alt="An oscilloscope probe touching a test pad on a printed circuit board" fetchpriority="high">
+          <figcaption>AI-generated electronics illustration</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="work section" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-heading work-heading">
+          <h2 id="work-title">Selected work</h2>
+          <p>Two university projects that went from circuit design and simulation to hardware testing.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project">
+            <div class="project-result converter-result">
+              <p class="label">Prototype measurements · DC input</p>
+              <dl class="measurements">
+                <div><dt>DC output</dt><dd>10<span> V</span></dd></div>
+                <div><dt>Output ripple</dt><dd>&lt;200<span> mV</span></dd></div>
+              </dl>
+            </div>
+            <div class="project-body">
+              <p class="label project-meta">Power electronics · Spring 2026</p>
+              <h3>Forward converter power supply</h3>
+              <p class="project-description">As group lead, I helped take a closed-loop converter from PLECS simulation through PCB layout, prototype assembly and bench testing.</p>
+              <ul class="tags" aria-label="Tools and skills"><li>PLECS</li><li>PCB layout</li><li>Feedback control</li></ul>
+              <details>
+                <summary>Technical details</summary>
+                <p>I designed Type I and Type III voltage controllers using the k-factor method and worked on the transformer and output inductor. In testing, the Type III design improved 100 Hz line ripple rejection by 37% compared with Type I.</p>
+              </details>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project-result radar-result">
+              <p class="label">Signal path · Doppler radar</p>
+              <ol class="signal-path" aria-label="Signal path from radar to display">
+                <li><strong>HB100</strong><span>Radar</span></li>
+                <li><strong>Analog</strong><span>Front end</span></li>
+                <li><strong>STM32</strong><span>Sampling</span></li>
+                <li><strong>Speed</strong><span>Display</span></li>
+              </ol>
+            </div>
+            <div class="project-body">
+              <p class="label project-meta">Embedded systems · 2025–2026</p>
+              <h3>Doppler radar speed measurement</h3>
+              <p class="project-description">I built and tested analog signal conditioning circuits, then integrated the radar front end with an STM32 to calculate and display speed in real time.</p>
+              <ul class="tags" aria-label="Tools and skills"><li>STM32</li><li>CPLD</li><li>Oscilloscope</li></ul>
+              <details>
+                <summary>Technical details</summary>
+                <p>I built an 80–1,200 Hz bandpass filter, an inverting amplifier and a Schmitt trigger comparator. I verified the analog response on an oscilloscope and used USART to debug ADC sampling and Doppler frequency extraction.</p>
+              </details>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section" id="experience" aria-labelledby="experience-title">
+      <div class="shell experience-grid">
+        <div class="section-heading">
+          <h2 id="experience-title">Experience</h2>
+        </div>
+        <ol class="experience-list">
+          <li class="experience-item">
+            <div class="experience-title"><h3>Research Intern</h3><p class="date">Jun–Aug 2026</p></div>
+            <p class="organization">Zhejiang University · Miracle Automation Engineering Joint Laboratory for Embodied Intelligence</p>
+            <p>I worked on reproducing DexGrasp Anything and ACoT-VLA. I set up PyTorch and Isaac Gym workflows, ran grasping benchmarks across three datasets, and adapted a LIBERO data conversion script to work with a newer LeRobot API.</p>
+          </li>
+          <li class="experience-item">
+            <div class="experience-title"><h3>Hardware Engineer Assistant</h3><p class="date">Jun–Jul 2025</p></div>
+            <p class="organization">Zhidongli Robotics Co., Ltd.</p>
+            <p>I assembled and tested PCBs, created component footprints from datasheets in Altium Designer, and laid out a two-layer step-down regulator board.</p>
+          </li>
+          <li class="experience-item">
+            <div class="experience-title"><h3>Investment Analyst Assistant</h3><p class="date">Jul–Aug 2024</p></div>
+            <p class="organization">SPIC Industrial Fund Management Co., Ltd.</p>
+            <p>I researched mobile electric vehicle chargers and prepared a briefing that drew on industry reports, policy documents and company announcements.</p>
+          </li>
+          <li class="experience-item">
+            <div class="experience-title"><h3>Electrical Engineer Assistant</h3><p class="date">Jul 2024</p></div>
+            <p class="organization">Sumitomo Electric Wintec (Wuxi) Co., Ltd.</p>
+            <p>I helped inspect and troubleshoot wire drawing equipment and studied how production settings affect magnet wire quality.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="shell">
+        <div class="section-heading"><h2 id="about-title">About me</h2></div>
+        <div class="about-grid">
+          <div class="education">
+            <p class="label">Education</p>
+            <h3>University of Nottingham Ningbo China</h3>
+            <p>BEng (Hons) in Electrical and Electronic Engineering</p>
+            <p class="date">Sep 2023 – Jun 2027 (expected)</p>
+          </div>
+          <div class="skills">
+            <h3 class="label">Technical skills</h3>
+            <dl>
+              <div><dt>Programming &amp; robotics</dt><dd>Python, C, C++, PyTorch, Isaac Gym</dd></div>
+              <div><dt>Design &amp; simulation</dt><dd>Altium Designer, MATLAB, PLECS, LTspice</dd></div>
+              <div><dt>Hardware &amp; testing</dt><dd>PCB layout, STM32, soldering, oscilloscope measurements</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner"><p>Jiakuan Lu <span>·</span> Engineering portfolio</p><a href="#top">Back to top</a></div>
+  </footer>
+</body>
+</html>
