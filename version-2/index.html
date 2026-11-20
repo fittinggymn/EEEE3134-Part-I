@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jiakuan Lu, an Electrical and Electronic Engineering student at the University of Nottingham Ningbo China.">
+  <meta name="theme-color" content="#f1f6fb">
+  <title>Jiakuan Lu | Engineering Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./navigation.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#home" aria-current="location">Jiakuan Lu</a>
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#background">Background</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" id="home" aria-labelledby="name">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Electrical and Electronic Engineering</p>
+          <h1 id="name">Jiakuan Lu</h1>
+          <p class="intro">My work spans embedded hardware and power electronics, and I have work experience in embodied intelligence.</p>
+          <p class="university">University of Nottingham Ningbo China</p>
+          <div class="hero-links">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button secondary" href="#experience">Work experience</a>
+          </div>
+        </div>
+        <img class="hero-photo" src="./assets/converter-lab.webp" width="1200" height="900" alt="Illustration of a converter board with transformers, capacitors, and test leads on a lab bench" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="shell">
+        <header class="section-heading project-heading">
+          <h2 id="projects-title">Selected projects</h2>
+          <nav class="project-index" aria-label="Jump to a project">
+            <a href="#forward-converter">Forward converter</a>
+            <a href="#doppler-radar">Doppler radar</a>
+          </nav>
+        </header>
+
+        <article class="project" id="forward-converter" aria-labelledby="converter-title">
+          <div class="project-copy">
+            <p class="eyebrow">Power electronics · Spring 2026</p>
+            <h3 id="converter-title">Forward converter power supply</h3>
+            <p class="project-lead">I led the group in building and testing a closed-loop switched-mode power supply.</p>
+            <div class="project-detail">
+              <h4>My contribution</h4>
+              <p>I worked on PCB placement and routing, the prototype assembly, and the transformer and output inductor. I used PLECS and the k-factor method to design Type I and Type III voltage controllers.</p>
+            </div>
+            <div class="project-detail">
+              <h4>Results</h4>
+              <p>Under DC input, the prototype delivered a stable 10 V output with less than 200 mV of ripple. The Type III controller improved 100 Hz line ripple rejection by 37% compared with Type I.</p>
+            </div>
+            <ul class="tags" aria-label="Tools and skills"><li>PLECS</li><li>PCB layout</li><li>Hardware testing</li></ul>
+          </div>
+          <figure class="project-visual waveform">
+            <h4>DC output under steady conditions</h4>
+            <dl class="readouts" aria-label="Prototype results under DC input">
+              <div><dt>DC output</dt><dd>10 V</dd></div>
+              <div><dt>Output ripple</dt><dd>&lt;200 mV</dd></div>
+            </dl>
+            <img src="./assets/converter-waveform.png" width="813" height="396" alt="An illustrative output voltage trace with small periodic ripple around 10 V">
+            <figcaption>Illustrative waveform. The vertical scale is enlarged to show ripple.</figcaption>
+          </figure>
+        </article>
+
+        <article class="project" id="doppler-radar" aria-labelledby="radar-title">
+          <div class="project-copy">
+            <p class="eyebrow">Embedded systems · Autumn 2025</p>
+            <h3 id="radar-title">Doppler radar speed measurement</h3>
+            <p class="project-lead">Our group built a system that measures and displays speed in real time from the Doppler frequency.</p>
+            <div class="project-detail">
+              <h4>My contribution</h4>
+              <p>I built an 80–1,200 Hz bandpass filter, an inverting amplifier and a Schmitt trigger comparator. I checked the analog response with an oscilloscope and integrated the front end with an STM32.</p>
+            </div>
+            <div class="project-detail">
+              <h4>Results</h4>
+              <p>The system extracted Doppler frequency from the sampled signal and displayed the calculated speed on a digital output.</p>
+            </div>
+            <ul class="tags" aria-label="Tools and skills"><li>STM32</li><li>CPLD</li><li>Oscilloscope</li></ul>
+          </div>
+          <div class="project-visual signal" role="group" aria-labelledby="signal-title">
+            <h4 id="signal-title">From radar signal to speed</h4>
+            <p class="visual-help">Select a stage to see what it does.</p>
+            <ol class="signal-flow">
+              <li><details name="signal-stage"><summary><span class="stage-icon radar-icon" aria-hidden="true"><i></i></span><span><strong>HB100 radar</strong><small>Detect motion</small></span></summary><p>The radar provides a low-frequency Doppler signal when a target moves.</p></details></li>
+              <li><details name="signal-stage"><summary><span class="stage-icon filter-icon" aria-hidden="true"><i></i></span><span><strong>Analog front end</strong><small>Filter and shape the signal</small></span></summary><p>The bandpass filter and amplifier condition the signal. A Schmitt trigger shapes the waveform.</p></details></li>
+              <li><details name="signal-stage"><summary><span class="stage-icon chip-icon" aria-hidden="true"><i></i></span><span><strong>STM32 sampling</strong><small>Extract the Doppler frequency</small></span></summary><p>The microcontroller samples the signal with its ADC. I used USART to debug sampling and frequency extraction.</p></details></li>
+              <li><details name="signal-stage"><summary><span class="stage-icon display-icon" aria-hidden="true"><i></i></span><span><strong>Speed display</strong><small>Show the computed speed</small></span></summary><p>The system converts the Doppler frequency into a speed and updates the display in real time.</p></details></li>
+            </ol>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section experience" id="experience" aria-labelledby="experience-title">
+      <div class="shell">
+        <header class="section-heading"><h2 id="experience-title">Work experience</h2></header>
+        <ol class="experience-list">
+          <li>
+            <p class="date">Jun–Aug 2026</p>
+            <div><h3>Research Intern</h3><p class="organization">Zhejiang University · Miracle Automation Engineering Joint Laboratory for Embodied Intelligence</p><p>I helped reproduce DexGrasp Anything and ACoT-VLA. I set up PyTorch and Isaac Gym workflows, ran grasping benchmarks across three datasets, and adapted a LIBERO data conversion script for a newer LeRobot API.</p></div>
+          </li>
+          <li>
+            <p class="date">Jun–Jul 2025</p>
+            <div><h3>Hardware Engineer Assistant</h3><p class="organization">Zhidongli Robotics Co., Ltd.</p><p>I assembled and tested PCBs, created component footprints from datasheets in Altium Designer, and laid out a two-layer step-down regulator board.</p></div>
+          </li>
+          <li>
+            <p class="date">Jul–Aug 2024</p>
+            <div><h3>Investment Analyst Assistant</h3><p class="organization">SPIC Industrial Fund Management Co., Ltd.</p><p>I researched mobile electric vehicle chargers and prepared a briefing from industry reports, policy documents and company announcements.</p></div>
+          </li>
+          <li>
+            <p class="date">Jul 2024</p>
+            <div><h3>Electrical Engineer Assistant</h3><p class="organization">Sumitomo Electric Wintec (Wuxi) Co., Ltd.</p><p>I helped inspect and troubleshoot wire drawing equipment and studied how production settings affect magnet wire quality.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="background" aria-labelledby="background-title">
+      <div class="shell">
+        <header class="section-heading"><h2 id="background-title">Education &amp; skills</h2></header>
+        <div class="background-grid">
+          <div class="background-card">
+            <h3>Education</h3>
+            <p class="school">University of Nottingham Ningbo China</p>
+            <p>Electrical and Electronic Engineering</p>
+            <p class="date">Sep 2023 – Jun 2027 (expected)</p>
+            <h3 class="language-title">Languages</h3>
+            <ul class="language-list"><li>Mandarin · native</li><li>English · <strong>IELTS 7.5</strong></li></ul>
+          </div>
+          <div class="background-card">
+            <h3>Technical skills</h3>
+            <dl class="skills-list">
+              <div><dt>Programming</dt><dd>Python, C, C++</dd></div>
+              <div><dt>Design &amp; simulation</dt><dd>Altium Designer, MATLAB, PLECS, LTspice</dd></div>
+              <div><dt>Hardware &amp; testing</dt><dd>PCB layout, STM32, soldering, oscilloscope measurements</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner"><p>Jiakuan Lu · Engineering portfolio</p><a href="#home">Back to top</a></div>
+  </footer>
+</body>
+</html>
